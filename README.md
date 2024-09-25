@@ -37,7 +37,7 @@ Follow these steps to set up and run the application:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/three-tier-app.git
+git clone https://github.com/surajmundhe30/three-tier-app.git
 cd three-tier-app
 ```
 
@@ -57,21 +57,13 @@ Use Docker Compose to build and start the services locally:
 docker-compose up --build
 ```
 
-### 4. Deploy the Application to Docker Swarm
-
-To deploy the application using Docker Swarm, create a `stack.yml` file and run:
-
-```bash
-docker stack deploy -c stack.yml three-tier-app
-```
-
-### 5. Access the Application
+### 4. Access the Application
 
 - **Frontend**: Open your browser and navigate to `http://localhost:8080/register.html` for user registration and `http://localhost:8080/users.html` for viewing and managing user details.
 - **Backend**: The backend service will be running on port `3000`.
 - **Database**: The MySQL database service will be accessible internally within the Docker network.
 
-### 6. Database Initialization
+### 5. Database Initialization
 
 The `db/init.sql` script is automatically executed to set up the database when the MySQL container is first started. Ensure your database service in the `docker-compose.yml` or `stack.yml` uses this script for initialization.
 
